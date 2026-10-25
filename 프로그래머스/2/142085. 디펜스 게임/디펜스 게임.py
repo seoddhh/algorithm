@@ -3,10 +3,10 @@ import heapq
 def solution(n, k, enemy):
     heap = []
     
-    for round_index, round_enemy in enumerate(enemy):
+    for round_index, total_enemy in enumerate(enemy):
         
-        n -= round_enemy
-        heapq.heappush(heap, -round_enemy)
+        n -= total_enemy
+        heapq.heappush(heap, -total_enemy)
         
         if n < 0:
             if k == 0:
